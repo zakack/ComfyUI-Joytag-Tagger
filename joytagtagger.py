@@ -26,12 +26,12 @@ defaults = {
     "trailing_comma": False,
     "exclude_tags": "",
     "HF_ENDPOINT": "https://huggingface.co",
-    "model_files": ["model.safetensors", "top_tags.txt", "config.json"]
+    "model_files": "model.safetensors, top_tags.txt, config.json"
 }
 defaults.update(config.get("settings", {}))
 
 models_dir = get_ext_dir("models", mkdir=True)
-model_files = config["model_files"]
+model_files = config["model_files"].split(', ')
 
 
 def prepare_image(image):
