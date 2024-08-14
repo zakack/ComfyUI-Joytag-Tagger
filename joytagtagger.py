@@ -21,6 +21,7 @@ config = get_extension_config()
 
 defaults = {
     "model": "joytag",
+    "repo": "{HF_ENDPOINT}/fancyfeast/joytag",
     "threshold": 0.35,
     "replace_underscore": False,
     "trailing_comma": False,
@@ -31,7 +32,7 @@ defaults = {
 defaults.update(config.get("settings", {}))
 
 models_dir = get_ext_dir("models", mkdir=True)
-model_files = config["model_files"].split(', ')
+model_files = defaults["model_files"].split(', ')
 
 
 def prepare_image(image):
@@ -98,7 +99,7 @@ async def download_model(client_id, node):
     if hf_endpoint.endswith("/"):
         hf_endpoint = hf_endpoint.rstrip("/")
 
-    url = config["repo"]
+    url = defaults["repo"]
     url = url.replace("{HF_ENDPOINT}", hf_endpoint)
     url = f"{url}/resolve/main/"
     async with aiohttp.ClientSession(loop=asyncio.get_event_loop()) as session:
