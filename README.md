@@ -6,7 +6,7 @@ Based on [SmilingWolf/wd-v1-4-tags](https://huggingface.co/spaces/SmilingWolf/wd
 All models created by [fancyfeast](https://huggingface.co/fancyfeast/joytag)
 
 ## Installation
-1. `git clone https://github.com/pythongosssss/ComfyUI-Joytag-Tagger` into the `custom_nodes` folder 
+1. `git clone https://github.com/zakack/ComfyUI-Joytag-Tagger` into the `custom_nodes` folder 
     - e.g. `custom_nodes\ComfyUI-Joytag-Tagger`  
 2. Open a Command Prompt/Terminal/etc
 3. Change to the `custom_nodes\ComfyUI-Joytag-Tagger` folder you just created 
