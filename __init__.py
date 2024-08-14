@@ -1,6 +1,4 @@
-from .pysssss import init
+from .joytagtagger import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
 
-if init(check_imports=["onnxruntime"]):
-    from .wd14tagger import NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
-    WEB_DIRECTORY = "./web"
-    __all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS", "WEB_DIRECTORY"]
+WEB_DIRECTORY = "./web"
+__all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS", "WEB_DIRECTORY"]

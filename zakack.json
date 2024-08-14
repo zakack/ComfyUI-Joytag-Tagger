@@ -1,0 +1,10 @@
+{
+	"name": "JoytagTagger",
+	"logging": false,
+	"settings": {
+		"model_files": ["model.safetensors", "top_tags.txt", "config.json"],
+		"threshold": 0.35,
+		"exclude_tags": "",
+		"HF_ENDPOINT": "https://huggingface.co",
+	}
+}
